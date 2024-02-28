@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-    ulam: { image: String, video: String, title: String, ingredients: Array },
+    ulam: { imageURL: String, ytLink: String, ulamName: String, ingredients: Array },
     onClose: Function,
 });
 
