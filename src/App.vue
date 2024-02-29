@@ -30,6 +30,10 @@ const deleteUlam = (ulamId) => {
 </script>
 <template>
   This is the main page
+
+  <RouterView />
+
+  <RouterLink to="WheelVue">Wheel</RouterLink>
   <div>
     <input v-model="newUlam.ulamName" type="text" placeholder="Ulam Name" />
     <input
