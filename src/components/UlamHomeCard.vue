@@ -1,27 +1,36 @@
 <script setup>
-import { defineProps } from 'vue';
-    const props = defineProps({
-        ulam:{ imageURL: String, ytLink: String, ulamName: String, ingredients: Array },
-        addUlam: Function,
-        deleteUlam: Function
-    })
+import { defineProps } from "vue";
+const props = defineProps({
+  ulam: {
+    id: String,
+    imageURL: String,
+    ytLink: String,
+    ulamName: String,
+    ingredients: Array,
+  },
+  deleteUlam: Function,
+});
 </script>
 <template>
-    <div class="card">
+  <div class="card">
     <div class="card-header">
-      <h2>{{ ulam.ulamName }}</h2>
+      <h2>{{ props.ulam.ulamName }}</h2>
     </div>
     <div class="card-body">
-      <img :src="ulam.imageURL" alt="Ulam Image" height="100" width="100" />
+      <img
+        :src="props.ulam.imageURL"
+        alt="Ulam Image"
+        height="100"
+        width="100"
+      />
       <iframe
-    :src="ulam.ytLink"
-    width="800"
-    height="600"
-    frameborder="0"
-    allowfullscreen
-  ></iframe>
+        :src="props.ulam.ytLink"
+        width="800"
+        height="600"
+        frameborder="0"
+      ></iframe>
     </div>
-    <button @click="deleteUlam(ulam.id)">Delete</button>
+    <button @click="props.deleteUlam(props.ulam.id)">Delete</button>
   </div>
 </template>
 <style scoped>
