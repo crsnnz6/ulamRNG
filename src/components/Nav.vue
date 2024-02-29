@@ -1,10 +1,8 @@
 <template>
   <nav>
-    <ul>
-      <li><router-link to="/Home">Home</router-link></li>
-      <li><router-link to="/WheelVue">Generate</router-link></li>
-      
-    </ul>
+    
+      <router-link to="/"><img src="/WYU.png" class="icon"></router-link>
+    
 
     <!-- Modal -->
     <div v-if="showModal" class="modal">
@@ -51,10 +49,16 @@ const deleteUlam = (ulamId) => {
 
 </script>
 
-<style>
+<style >
 /* Optional styling for the navbar */
+.icon{
+  height: 50px;
+  margin: 5px;
+  margin-left: 15px;
+}
+
 nav {
-  background-color: #333;
+  background-color: black;
   padding: 10px 0;
 }
 

@@ -13,19 +13,20 @@ const props = defineProps({
 </script>
 <template>
   <div class="card-list">
-      <div class="card">
+      <div class="card col">
           <div class="card-body" @click="onClick">
               <img
                   :src="props.ulam.imageURL"
                   alt="Ulam Image"
                   max-width="100%"
+                  height="20px"
                   display="block"
               />
           </div>
           <div class="card-header">
               <a>{{ props.ulam.ulamName }}</a>
           </div>
-          <button @click="props.deleteUlam(props.ulam.id)">Delete</button>
+          <button @click="props.deleteUlam(props.ulam.id)" class="delButton">Delete</button>
       </div>
   </div>
 </template>
@@ -66,7 +67,7 @@ const props = defineProps({
   color: inherit;
   will-change: transform;
 }
-.card-header aafter {
+.card-header after {
   content: "";
   position: absolute;
   left: 0;
@@ -81,7 +82,7 @@ const props = defineProps({
 
 .card-body img {
   max-width: 100%;
-  height: auto;
+  height: 250px;
 }
 
 .card-body p {
@@ -95,5 +96,15 @@ const props = defineProps({
 
 .card-body a:hover {
   text-decoration: underline;
+}
+.delButton{
+  background-color: #FE0100;
+  color: white;
+  border: #FE0100;
+}
+
+.delButton:hover{
+  background-color: black;
+
 }
 </style>

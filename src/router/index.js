@@ -8,7 +8,7 @@ export const router = createRouter({
 
   routes: [
     {
-      path: "/home",
+      path: "/",
 
       name: "Home",
 

@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "uuid": "^9.0.1",
     "vue": "^3.4.15",
     "vue-route": "^1.5.1",
     "vue-router": "^4.3.0",
+    "vue-sweetalert2": "^5.0.5",
     "vue3-fortune-wheel": "^1.1.37"
   },
   "devDependencies": {

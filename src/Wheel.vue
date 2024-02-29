@@ -49,16 +49,43 @@ function launchWheel() {
 </script>
 
 <template>
-<Nav></Nav>  
-  This is the wheel page.
-  <button @click="launchWheel">Spin</button>
-  <Wheel v-model="data" ref="wheel" :gift="gift" />
+<Nav/>  
+ <div class="main">
+  <button @click="launchWheel" class="generate-ulam-button">Generate Your Ulam For Today!</button>
 
-  <div v-for="ulam in ulams">{{ ulam.ulamName }}</div>
+  <center><Wheel v-model="data" ref="wheel" :gift="gift" /></center>
+
+  <!-- <div v-for="ulam in ulams">{{ ulam.ulamName }}</div> -->
 
   <UlamModal
     v-if="openModal"
     :onClose="() => (openModal = false)"
     :ulam="selectedUlam"
   />
+ </div>
 </template>
+<style scoped>
+.main {
+  background-color: #faedcd;
+  height: 100%;
+}
+.generate-ulam-button {
+  width: 380px;
+  height: 10vh;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  background-color: #FE0100;
+  margin: 20px;
+}
+
+.generate-ulam-button:hover {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  transform: translatey(-5px);
+  
+}
+</style>
