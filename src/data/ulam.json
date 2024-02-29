@@ -1,20 +1,56 @@
 [
-    {
-        "id": 1,
-        "ulamName": "Pinakbet",
-        "imageURL": "https://th.bing.com/th/id/OIP.VQV4cXnU7f523w_IqCZ9CAHaE8?w=299&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-        "ytLink": "https://youtu.be/GGn79s1oPk8?si=4aEU3XVyIUrbF5O_"
-    },
-    {
-        "id": 2,
-        "ulamName": "Adobong Manok",
-        "imageURL": "https://www.friendcheapmenu.com/wp-content/uploads/2020/06/feature-6.jpg",
-        "ytLink": "https://youtu.be/mtyULaM6RfQ?si=v9K37LZDWYS9FVY4"
-    },
-    {
-        "id": 3,
-        "ulamName": "Bulalo",
-        "imageURL": "https://th.bing.com/th/id/R.dd7e97e6848a701b527546072de640ce?rik=SHLyi9aSTVRykQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f-CeXdekRHDKk%2fTkAPhgbYCdI%2fAAAAAAAAAOE%2fIqRF9DFV08c%2fs1600%2fbulalo%2brecipe.jpg&ehk=g35JHpxcTGPhBhqKBh7ROgz4dSPoN4FISKLneZbq33U%3d&risl=&pid=ImgRaw&r=0",
-        "ytLink": "https://youtu.be/mJue4oZeC7Y?si=R0UbrHnMIflAeS0X"
-    }
+  {
+    "id": 1,
+    "ulamName": "Pinakbet",
+    "imageURL": "https://th.bing.com/th/id/OIP.VQV4cXnU7f523w_IqCZ9CAHaE8?w=299&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    "ytLink": "https://youtu.be/GGn79s1oPk8?si=4aEU3XVyIUrbF5O_",
+    "ingredients": [
+      "Talong",
+      "Kalabasa",
+      "Ampalaya",
+      "Okra",
+      "Sitaw",
+      "Talong na Berde",
+      "Kamatis",
+      "Bagoong Alamang",
+      "Karne",
+      "Bawang",
+      "Sibuyas",
+      "Paminta"
+    ]
+  },
+  {
+    "id": 2,
+    "ulamName": "Adobong Manok",
+    "imageURL": "https://www.friendcheapmenu.com/wp-content/uploads/2020/06/feature-6.jpg",
+    "ytLink": "https://youtu.be/mtyULaM6RfQ?si=v9K37LZDWYS9FVY4",
+    "ingredients": [
+      "Karne ng manok",
+      "Suka",
+      "Toyo",
+      "Bawang",
+      "Sibuyas",
+      "Paminta",
+      "Dahon ng Laurel",
+      "Mantika",
+      "Tubig"
+    ]
+  },
+  {
+    "id": 3,
+    "ulamName": "Bulalo",
+    "imageURL": "https://th.bing.com/th/id/R.dd7e97e6848a701b527546072de640ce?rik=SHLyi9aSTVRykQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f-CeXdekRHDKk%2fTkAPhgbYCdI%2fAAAAAAAAAOE%2fIqRF9DFV08c%2fs1600%2fbulalo%2brecipe.jpg&ehk=g35JHpxcTGPhBhqKBh7ROgz4dSPoN4FISKLneZbq33U%3d&risl=&pid=ImgRaw&r=0",
+    "ytLink": "https://youtu.be/mJue4oZeC7Y?si=R0UbrHnMIflAeS0X",
+    "ingredients": [
+      "Tuhod ng Baka",
+      "Buto ng Baka",
+      "Mais",
+      "Sibuyas",
+      "Bawang",
+      "Dahon ng laurel",
+      "Asin",
+      "Paminta",
+      "Tubig"
+    ]
+  }
 ]
