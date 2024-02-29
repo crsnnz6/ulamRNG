@@ -3,6 +3,7 @@ import { ref } from "vue";
 import UlamModal from "./components/UlamModal.vue";
 import { Wheel } from "vue3-fortune-wheel";
 import ulamData from "./data/ulam.json";
+import Nav from './components/Nav.vue';
 
 if (!localStorage.getItem("ulamData")) {
   localStorage.setItem("ulamData", JSON.stringify(ulamData));
@@ -48,6 +49,7 @@ function launchWheel() {
 </script>
 
 <template>
+<Nav></Nav>  
   This is the wheel page.
   <button @click="launchWheel">Spin</button>
   <Wheel v-model="data" ref="wheel" :gift="gift" />
