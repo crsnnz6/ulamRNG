@@ -1,8 +1,9 @@
 <template>
   <div>
     <Nav/>
-    <button @click="showModal = true">Add Ulam</button>
-
+    <button @click="showModal = true" class="add-ulam-button">Add Ulam</button>
+    <div class="main">
+      <!-- <img href="../public/logo.png" height="200px"> -->
     <!-- Modal -->
     <div v-if="showModal" class="modal">
       <div class="modal-content">
@@ -23,7 +24,15 @@
       :key="ulam.id"
       :ulam="ulam"
       :deleteUlam="deleteUlam"
+      :onClick="() => handleCardClick(ulam)"
     />
+    <UlamModal
+        v-if="openModal"
+        :ulam="selectedUlam"
+        :onClose="() => (openModal = false)"
+    />//
+
+    </div>
   </div>
 </template>
 
@@ -33,6 +42,15 @@ import ulamData from "./data/ulam.json";
 import { v4 as uuidv4 } from "uuid";
 import UlamHomeCard from "./components/UlamHomeCard.vue";
 import Nav from './components/Nav.vue';
+import UlamModal from "./components/UlamModal.vue"; //
+
+const openModal = ref(false);//
+const selectedUlam = ref(null);//
+
+const handleCardClick = (ulam) => {//
+    selectedUlam.value = ulam;//
+    openModal.value = true;//
+};//
 
 if (!localStorage.getItem("ulamData")) {
   localStorage.setItem("ulamData", JSON.stringify(ulamData));
@@ -63,6 +81,10 @@ const deleteUlam = (ulamId) => {
 </script>
 
 <style scoped>
+.main{
+  background-color: #FAEDCD;
+  height: 100%;
+}
 /* Modal styles */
 .modal {
   display: flex;
@@ -97,16 +119,20 @@ const deleteUlam = (ulamId) => {
   border-radius: 4px;
 }
 
-.add-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
+.add-ulam-button {
+  margin-left: 1750px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
-.add-button:hover {
+.add-ulam-button:hover {
   background-color: #0056b3;
 }
 

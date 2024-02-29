@@ -18,22 +18,30 @@ console.log(props.ulam);
 
 <template>
   <div class="backdrop" @click="handleClose">
-    <div class="modal" @click="(e) => e.stopPropagation()">
-      <button @click="handleClose">Close</button>
-      <div class="container">
-        <img :src="props.ulam?.imageURL" alt="Ulam" />
-        <h1>{{ props.ulam?.ulamName }}</h1>
-        <h2>Ingredients</h2>
-        <ul v-for="ingredient of props.ulam?.ingredients">
-          <li>{{ ingredient }}</li>
-        </ul>
-        <a target="_blank" :href="props.ulam?.ytLink">Video Link</a>
+      <div class="modal" @click="(e) => e.stopPropagation()">
+          <button @click="handleClose">Close</button>
+          <div class="container">
+              <iframe
+                  :src="props.ulam.ytLink"
+                  width="800"
+                  height="600"
+                  frameborder="0"
+              ></iframe>
+              <!-- <img :src="props.ulam?.imageURL" alt="Ulam" /> -->
+              <h1>{{ props.ulam?.ulamName }}</h1>
+              <h2>Ingredients</h2>
+              <ul v-for="ingredient of props.ulam?.ingredients">
+                  <li>{{ ingredient }}</li>
+              </ul>
+          </div>
       </div>
-    </div>
   </div>
 </template>
 
 <style scoped>
+li{
+  color: black;
+}
 .backdrop {
   position: fixed;
   top: 0;
