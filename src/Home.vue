@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import ulamData from "./data/ulam.json";
 import { v4 as uuidv4 } from "uuid";
+import UlamHomeCard from "./components/UlamHomeCard.vue";
 
 if (!localStorage.getItem("ulamData")) {
   localStorage.setItem("ulamData", JSON.stringify(ulamData));
@@ -29,5 +30,25 @@ const deleteUlam = (ulamId) => {
 };
 </script>
 <template>
-    
+  <div>
+    <input v-model="newUlam.ulamName" type="text" placeholder="Ulam Name" />
+    <input
+      v-model="newUlam.imageURL"
+      type="text"
+      placeholder="Ulam Image Link"
+    />
+    <input
+      v-model="newUlam.ytLink"
+      type="text"
+      placeholder="Ulam YT video Link"
+    />
+    <input v-model="newUlamIngredients" type="text" placeholder="Ingredients" />
+    <button @click="addUlam(newUlam)">Add Ulam</button>
+  </div>
+  <UlamHomeCard
+    v-for="ulam in ulams"
+    :key="ulam.id"
+    :ulam="ulam"
+    :deleteUlam="deleteUlam"
+  />
 </template>
